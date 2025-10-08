@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --color-primary:#2E4057;
+  --color-secondary:#A7C5EB;
+  --color-accent:#FFB4A2;
+  --color-bg:#F9F9FB;
+  --color-surface:#FFFFFF;
+  --color-muted:#DDE6F2;
+  --color-text:#1C2633;
+}
+
+/* Utilidades ligadas a las variables (evita tocar tailwind.config.js) */
+.bg-primary   { background-color: var(--color-primary) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-accent    { background-color: var(--color-accent) !important; }
+.bg-surface   { background-color: var(--color-surface) !important; }
+.bg-app       { background-color: var(--color-bg) !important; }
+
+.text-app     { color: var(--color-text) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+
+.border-muted { border-color: var(--color-muted) !important; }
+
+/* Gradientes Soft Tech */
+.softtech-hero {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+}
+
+/* Texto en gradiente Soft Tech */
+.softtech-text {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+.black-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.violet-gradient {
+  background: linear-gradient(-90deg, var(--color-secondary) 0%, rgba(60,51,80,0) 100%);
+}
+
+.green-pink-gradient {
+  background: linear-gradient(-90deg, var(--color-secondary) 0%, rgba(60,51,80,0) 100%);
+}
+
+/* si quieres gradiente de texto con la paleta */
+.orange-text-gradient {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip:text;
+  color:transparent;
+}
+
+/* canvas- styles */
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+/* === Buttons Soft Tech === */
+.btn{display:inline-flex; align-items:center; gap:.5rem; font-weight:600;
+  border-radius:999px; padding:.65rem 1rem; border:1px solid transparent;
+  transition:transform .06s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{ background:var(--color-primary); color:#fff; }
+.btn-primary:hover{ filter:brightness(1.06); box-shadow:0 6px 16px rgba(46,64,87,.25); }
+
+.btn-secondary{ background:var(--color-secondary); color:#1b2330; }
+.btn-secondary:hover{ filter:brightness(1.05); box-shadow:0 6px 16px rgba(167,197,235,.35); }
+
+.btn-accent{ background:var(--color-accent); color:#472b20; }
+.btn-accent:hover{ filter:brightness(1.05); box-shadow:0 6px 16px rgba(255,180,162,.35); }
+
+.btn-outline{ background:transparent; color:var(--color-primary); border-color:var(--color-primary); }
+.btn-outline:hover{ background:color-mix(in srgb, var(--color-primary) 8%, white); }
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow:
+      0em -2.6em 0em 0em #ffffff,
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+      1.8em -1.8em 0 0em #ffffff,
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7),
+      2.5em 0em 0 0em #ffffff,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.7),
+      1.75em 1.75em 0 0em #ffffff,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7),
+      0em 2.5em 0 0em #ffffff,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.7),
+      -1.8em 1.8em 0 0em #ffffff,
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7),
+      -2.6em 0em 0 0em #ffffff,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7),
+      -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+/* Gradiente de texto más legible */
+.softtech-text-strong{
+  /* refuerzo: oscurece un 15% el gradiente */
+  --g1: color-mix(in srgb, var(--color-secondary) 85%, var(--color-primary) 15%);
+  --g2: color-mix(in srgb, var(--color-accent) 85%, #d96b50 15%);
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* contorno + sombra para contraste sobre fondos claros */
+  -webkit-text-stroke: 1px rgba(28,38,51,.35); /* #1C2633 con alfa */
+  text-shadow: 0 2px 6px rgba(28,38,51,.25);
+}
+
+/* ==== SOFT TECH – GRADIENTS PRO ==== */
+
+/* Mesh pastel profesional (para secciones completas) */
+.bg-softtech-mesh{
+  background:
+    radial-gradient(1200px 600px at 0% 0%, rgba(167,197,235,.30) 0%, transparent 60%),
+    radial-gradient(900px 480px at 100% 20%, rgba(255,180,162,.30) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #F3F7FF 35%, #FFF5F2 100%);
+}
+
+/* Linear hero (si quieres versión sólida con más punch) */
+.bg-softtech-linear{
+  background: linear-gradient(120deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+}
+
+/* Borde degradado con glass para cards (contact/hero badge) */
+.card-gradient{
+  position: relative;
+  background: var(--color-surface);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  z-index: 0;
+}
+.card-gradient::before{
+  content:"";
+  position:absolute; inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  z-index:-1;
+}
+
+/* Botón “outline” con borde degradado */
+.btn-gradient{
+  position:relative;
+  border: none;
+  color: var(--color-primary);
+  background: var(--color-surface);
+}
+.btn-gradient::before{
+  content:"";
+  position:absolute; inset:-2px; border-radius:999px;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  z-index:-1;
+}
+.btn-gradient:hover{ filter:brightness(1.02); }
+
+/* Subrayado degradado animable (fino y elegante) */
+.underline-softtech{
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  height: 8px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+/* ==== GRADIENTE AZUL → NARANJA (PRO) ==== */
+/* Fondo intenso, limpio y profesional */
+.bg-softtech-linear-strong{
+  background: linear-gradient(
+    115deg,
+    #A7C5EB 0%,
+    #94B3DE 22%,
+    #FFD5C8 68%,
+    #FFB4A2 100%
+  );
+}
+
+/* Para legibilidad en títulos sobre gradiente */
+.text-elevated{
+  text-shadow: 0 2px 10px rgba(28,38,51,.25), 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* Píldora glass con borde suave (para resaltar palabras) */
+.pill-glass{
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 25%, transparent);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  border-radius: 16px;
+}
+
+/* Más contraste para párrafos sobre gradiente claro */
+.lead-contrast{ color: color-mix(in srgb, var(--color-text) 88%, black); }
+
+/* Canvas del portátil: tamaño visible y z-index correcto */
+/* Wrapper del canvas: visible, abajo, y alineado a la derecha */
+.canvas-under{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 48vh;
+  z-index: 2;
+  pointer-events: none;
+  display: flex; align-items: flex-end; justify-content: flex-end;
+}
+@media (min-width:1280px){ .canvas-under{ height: 50vh; } }
+@media (max-width:1024px){ .canvas-under{ height: 42vh; } }
+@media (max-width:640px) { .canvas-under{ height: 38vh; } }
+
+/* desplazamiento hacia la derecha sin romper el scale (usamos padding) */
+.laptop-nudge-right{ padding-right: 8vw; }
+@media (min-width:1536px){ .laptop-nudge-right{ padding-right: 12vw; } }
+
+/* (Opcional) si usas el desvanecido inferior, ponlo por encima del canvas */
+.hero-fade-bottom{ z-index: 3; }
+
+/* Fader inferior para que el 3D no compita con el texto */
+.hero-fade-bottom{
+  position:absolute; left:0; right:0; bottom:0; height:180px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--color-bg) 85%);
+  pointer-events:none;
+}
+
+/* ==== GRADIENTE AZUL → NARANJA (PRO) ==== */
+.bg-softtech-linear-strong{
+  background: linear-gradient(
+    115deg,
+    #A7C5EB 0%,
+    #94B3DE 22%,
+    #FFD5C8 68%,
+    #FFB4A2 100%
+  );
+}
+
+/* Legibilidad de títulos sobre gradiente */
+.text-elevated{
+  text-shadow: 0 2px 10px rgba(28,38,51,.25), 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* Píldora glass para resaltar texto */
+.pill-glass{
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 25%, transparent);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  border-radius: 16px;
+}
+
+/* Párrafos con más contraste sobre el gradiente */
+.lead-contrast{
+  color: color-mix(in srgb, var(--color-text) 88%, black);
+}
+
+/* Wrapper del canvas: visible, abajo, y alineado a la derecha */
+.canvas-under{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 48vh;
+  z-index: 2;
+  pointer-events: none;
+  display: flex; align-items: flex-end; justify-content: flex-end;
+}
+@media (min-width:1280px){ .canvas-under{ height: 50vh; } }
+@media (max-width:1024px){ .canvas-under{ height: 42vh; } }
+@media (max-width:640px) { .canvas-under{ height: 38vh; } }
+
+/* desplazamiento hacia la derecha sin romper el scale (usamos padding) */
+.laptop-nudge-right{ padding-right: 8vw; }
+@media (min-width:1536px){ .laptop-nudge-right{ padding-right: 12vw; } }
+
+.canvas-under canvas{ width:100% !important; height:100% !important; display:block; }
+
+/* tamaño y posición del portátil */
+.laptop-xl{ transform: scale(1.35); transform-origin: 85% 100%; }
+@media (max-width:1280px){ .laptop-xl{ transform: scale(1.20); } }
+@media (max-width:1024px){ .laptop-xl{ transform: scale(1.05); transform-origin: 80% 100%; } }
+@media (max-width:640px) { .laptop-xl{ transform: scale(0.90); transform-origin: 70% 100%; } }
+
+.laptop-raise{ translate: 0 -10px; }
+@media (min-width:1280px){ .laptop-raise{ translate: 0 -20px; } }
+
+
+/* (Opcional) si usas el desvanecido inferior, ponlo por encima del canvas */
+.hero-fade-bottom{ z-index: 3; }
+
+/* Desvanecido inferior para que el 3D no compita con el copy */
+.hero-fade-bottom{
+  position:absolute; left:0; right:0; bottom:0; height:180px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--color-bg) 85%);
+  pointer-events:none;
+}
+
+/* === Escalado/posición del portátil (más grande, hacia la derecha) === */
+.laptop-xl{
+  transform: scale(1.35);
+  transform-origin: 85% 100%;
+}
+@media (max-width:1280px){ .laptop-xl{ transform: scale(1.20); } }
+@media (max-width:1024px){ .laptop-xl{ transform: scale(1.05); transform-origin: 80% 100%; } }
+@media (max-width:640px){  .laptop-xl{ transform: scale(0.90); transform-origin: 70% 100%; } }
+
+.laptop-raise{ translate: 0 -10px; }
+@media (min-width:1280px){ .laptop-raise{ translate: 0 -20px; } }
+
+/* Sube el portátil (ajusta el bottom sin tocar todo) */
+.canvas-up{ bottom:56px; }
+@media (min-width:1280px){ .canvas-up{ bottom:72px; } }
+@media (max-width:1024px){ .canvas-up{ bottom:44px; } }
+
+/* === Custom gradient text effects === */
+.gradient-text {
+  background: linear-gradient(90deg, #a7c5eb, #fbc2eb, #fad0c4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.gradient-text:hover {
+  background-position: right center;
+  background: linear-gradient(90deg, #fff350, #ff80bf, #00f5d4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* ==== Gradiente Azul Oscuro → Naranja Pastel ==== */
+.gradient-softtech-azulnaranja {
+  background: linear-gradient(90deg, #2E4057, #FFB4A2);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease, text-shadow 0.5s ease;
+}
+.gradient-softtech-azulnaranja:hover {
+  background-position: right center;
+  background: linear-gradient(90deg, #FFB4A2, #2E4057);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255,180,162,0.45);
+}
+
+/* LinkedIn */
+
+/* === BOTÓN LINKEDIN AZUL PERO EQUILIBRADO === */
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .65rem 1.2rem; /* ← aumenta ancho */
+  background: #0A66C2;
+  color: #fff;
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.25);
+}
+
+.btn-linkedin:hover {
+  background: #004182;
+  box-shadow: 0 6px 18px rgba(10, 102, 194, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-linkedin-gradient {
+  background: linear-gradient(90deg, #2E4057, #0A66C2);
+  color: #fff;
+  border: none;
+  transition: all 0.4s ease;
+}
+.btn-linkedin-gradient:hover {
+  background: linear-gradient(90deg, #0A66C2, #FFB4A2);
+  box-shadow: 0 6px 20px rgba(10,102,194,0.3);
+}
+
+/* === BOTÓN LINKEDIN – SOFT TECH === */
+.btn-linkedin-soft {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .65rem 1rem;
+  color: #1C2633;
+  background: color-mix(in srgb, var(--color-surface) 75%, rgba(167,197,235,.25));
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 45%, rgba(255,255,255,.35));
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(167,197,235,.25);
+}
+
+.btn-linkedin-soft img {
+  width: 1.1rem;
+  height: 1.1rem;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.15));
+}
+
+.btn-linkedin-soft:hover {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255,180,162,.25);
+  transform: translateY(-1px);
+}
+
+/* === HOVER FIXO AZUL + COLOR AL PASAR === */
+/* === FIX FINAL Y DEFINITIVO === */
+
+.hover-cycle {
+  color: #19212D;                /* Azul base SIEMPRE visible */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  animation: none;               /* No hay animación por defecto */
+  background: none !important;   /* Nada de gradientes */
+  text-shadow: none;             /* Sin brillo base */
+}
+
+/* Al pasar el ratón: inicia ciclo */
+.hover-cycle:hover {
+  animation: hoverColorShift 4s linear infinite;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+}
+
+/* Ciclo de colores pastel mientras hay hover */
+@keyframes hoverColorShift {
+  0%   { color: #19212D; } /* azul */
+  25%  { color: #74F7C5; } /* verde menta */
+  50%  { color: #FF80BF; } /* rosa pastel */
+  75%  { color: #FFB4A2; } /* coral suave */
+  100% { color: #19212D; } /* vuelve a azul */
+}
+
+/* ==== STRATEGIA NUEVA: HOVER ALEATORIO EN SPAN ==== */
+
+/* Azul fijo siempre */
+.hover-smart {
+  color: #19212D;
+  cursor: pointer;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Brillo suave al hacer hover */
+.hover-smart:hover {
+  text-shadow: 0 0 6px currentColor;
+}
+
+/* === Efecto hover pastel para cards === */
+.service-card {
+  background: #0B1020; /* fondo base */
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(167, 197, 235, 0.3);
+  background: linear-gradient(145deg, #1a1f35, #14182a);
+}
+
+/* Si quieres añadir color por tipo, usa clases adicionales */
+.service-card:nth-child(1):hover { box-shadow: 0 0 20px rgba(108, 180, 238, 0.5); } /* azul */
+.service-card:nth-child(2):hover { box-shadow: 0 0 20px rgba(255, 128, 191, 0.5); } /* rosa */
+.service-card:nth-child(3):hover { box-shadow: 0 0 20px rgba(116, 247, 197, 0.5); } /* verde */
+.service-card:nth-child(4):hover { box-shadow: 0 0 20px rgba(255, 180, 162, 0.5); } /* coral */
+.service-card:nth-child(5):hover { box-shadow: 0 0 20px rgba(108, 180, 238, 0.5); }
+.service-card:nth-child(6):hover { box-shadow: 0 0 20px rgba(255, 128, 191, 0.5); }
+.service-card:nth-child(7):hover { box-shadow: 0 0 20px rgba(116, 247, 197, 0.5); }
+.service-card:nth-child(8):hover { box-shadow: 0 0 20px rgba(255, 180, 162, 0.5); }
+
+.profile-photo {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #A7C5EB, #FFB4A2);
+  padding: 3px;
+}
+.profile-photo img {
+  border-radius: 18px;
+  display: block;
+}
