@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
+import { textVariant } from "../utils/motion";
 
 export const Contact = () => {
   return (
@@ -11,15 +12,16 @@ export const Contact = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-white shadow-lg rounded-2xl p-10 max-w-xl mx-auto text-gray-800"
       >
+
         {/* Title */}
-        <p className={`${styles.sectionSubText} mb-2 text-[#19212D] font-semibold`}>
-          WORK
-        </p>
-        <h3
-          className={`${styles.sectionHeadText} text-[#FFB4A2] font-extrabold mt-0`}
-        >
-          Contact.
-        </h3>
+        <motion.div>
+          <p className={`${styles.sectionSubText} gradient-softtech-azulnaranja uppercase font-semibold`}>
+            Lets work together!
+          </p>
+          <h2 className={`${styles.sectionHeadText} gradient-softtech-azulnaranja font-extrabold`}>
+            Contact.
+          </h2>
+        </motion.div>
 
         {/* Info */}
         <div className="mt-8 space-y-4">

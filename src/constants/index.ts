@@ -1,5 +1,38 @@
-// Contains constant data for using in website
-// ! Don't remove anything from here if not sure
+// Imports company logos
+import meta from "../assets/company/meta.png";
+import shopify from "../assets/company/shopify.png";
+import starbucks from "../assets/company/starbucks.png";
+import tesla from "../assets/company/tesla.png";
+import sap from "../assets/company/sap.png";
+import vw from "../assets/company/vw.png";
+import openai from "../assets/company/openai.png";
+import bmw from "../assets/company/bmw.png";
+import gm from "../assets/company/gm.png";
+import movildrive from "../assets/company/movildrive.png";
+import visteon from "../assets/company/visteon.png";
+import magna from "../assets/company/magna.png";
+import continental from "../assets/company/continental.png";
+import airbus from "../assets/company/airbus.png";
+import esa from "../assets/company/esa.png";
+import indra from "../assets/company/indra.png";
+
+// Imports services
+import service1 from "../assets/services/service1.jpg";
+import service2 from "../assets/services/service2.jpg";
+import service3 from "../assets/services/service3.jpg";
+import service4 from "../assets/services/service4.jpg";
+import service5 from "../assets/services/service5.jpg";
+import service6 from "../assets/services/service6.jpg";
+import service7 from "../assets/services/service7.jpg";
+import service8 from "../assets/services/service8.jpg";
+
+// Import socials
+import github from "../assets/socials/github.svg";
+import linkedin from "../assets/socials/linkedin.svg";
+import twitter from "../assets/socials/twitter.svg";
+import youtube from "../assets/socials/youtube.svg";
+
+import { fadeIn } from "../utils/motion";
 
 import {
   mobile,
@@ -18,10 +51,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   threejs,
   project1,
   project2,
@@ -32,11 +61,51 @@ import {
   user1,
   user2,
   user3,
-  youtube,
-  linkedin,
-  twitter,
-  github,
 } from "../assets";
+
+export const SERVICES = [
+  {
+    title: "Engineering Projects",
+    backgroundImage: service1,
+    link: "https://www.eurofighter.com/"
+  },
+  {
+    title: "Business Strategy",
+    backgroundImage: service2,
+    link: "https://news.sap.com/2024/10/sap-s4hana-migration-guide-it-executives/",
+  },
+  {
+    title: "Agile Implementation",
+    backgroundImage: service3,
+    link: "https://www.atlassian.com/agile",
+  },
+  {
+    title: "Process Transformation",
+    backgroundImage: service4,
+    link: "https://cariad.technology/",
+  },
+  {
+    title: "Start-up Founder",
+    backgroundImage: service5,
+    link: "https://nexusfinlabs.com",
+  },
+  {
+    title: "AI & ML Automation",
+    backgroundImage: service6,
+    link: "https://iagrowth.io",
+  },
+  {
+    title: "Cloud & DevOps",
+    backgroundImage: service7,
+    link: "https://aws.amazon.com/devops",
+  },
+  {
+    title: "Full-Stack Development",
+    backgroundImage: service8,
+    link: "https://nexusfinlabs.io",
+  }
+] as const;
+
 
 // Navbar Links
 export const NAV_LINKS = [
@@ -58,49 +127,13 @@ export const NAV_LINKS = [
   {
     title: "AboutMe",
     link: null,
-    link: "",
+    link: "http://www.github.com/nexusfinlabs",
   },
   {
     id: "source-code",
     title: "GitHub",
     link: "http://www.github.com/nexusfinlabs",
   },
-] as const;
-
-// Services
-export const SERVICES = [
-  {
-    title: "Engineering Projects",
-    icon: mobile,
-  },
-  {
-    title: "Business Strategy",
-    icon: creator,
-  },
-  {
-    title: "Agile Implementation",
-    icon: backend,
-  },
-  {
-    title: "M&A and Private Equity",
-    icon: mobile,
-  },
-  {
-    title: "Start-up Founder",
-    icon: creator,
-  },
-  {
-    title: "AI & ML Automation",
-    icon: web,
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: backend,
-  },
-  {
-    title: "Full-Stack Development",
-    icon: web,
-  }
 ] as const;
 
 // Technologies
@@ -164,37 +197,49 @@ export const TECHNOLOGIES = [
 // -----------------------------------------------------------
 export const EXPERIENCES = [
   {
+    title: "SAP FICO Consultant",
+    company_name: "Freelancer",
+    icon: sap,
+    company_link: "https://www.sap.com",
+    iconBg: "#trasparent",
+    date: "Oct 2025 - now",
+    points: [
+      "SAP FI/CO Consultant experienced in end-to-end implementation, integration, and optimization of financial & controlling processes across global environments (GL, AP, AR, AA, COPA, PCA).",
+      "Strategy implementation for SAP BTP extensions using CAP, Fiori Elements, and CDS Views, integrating with S/4HANA Cloud and external APIs to automate workflows and analytics.",
+      "Strong focus on process automation, financial reporting, and data migration (Central Finance, IRPA, BRF+, Migration Cockpit) ensuring compliance and operational efficiency.",
+    ],
+  },
+  {
     title: "AI & Web3 Tech Lead",
     company_name: "Freelancer",
-    icon: starbucks,
+    icon: openai,
+    company_link: "https://iagrowth.io/automation.html",
     iconBg: "#383E56",
-    date: "Jan 2024 - Dec 2025",
+    date: "Jan 2024 - now",
     points: [
-      "Launched several automation projects to develop LLM AI-driven solutions for cloud projects.",
-      "Led the Multi Agentic-IA Systems development for marketing companies & Outbound Sales using n8n and Zapier.",
-      "Leveraged ML algorithms & Voice Agents to analyze customer trends and evaluate automated customer services.",
+      "Launched several automation projects to develop LLM AI-driven solutions like n8n and zapier for customer projecs and Multi Agentic-IA Systems for Marketing, Sales and ERP Software",
+      "Leveraged ML algorithms & Voice Agents using ElevenLabs to analyze customer trends and evaluate automated customer services.",
       "Designed and implemented autonomous, cloud-based multi-agent systems to enhance data workflows between BI, CRMs and ERPs.",
-      "Stacks: OpenAI, PowerBI, n8n, Hubspot, CloseCRM, Azure DataLake, LangChain, ElevenLabs, Docker, ApolloAPI, Clay, GitLab, Azure DevOps, Java, Python (FastAPI, Flask), Firebase, GenAI.",
     ],
   },
   {
     title: "Program Manager",
     company_name: "Cariad (VW Group)",
-    icon: tesla,
+    icon: vw,
+    company_link: "https://cariad.technology/de/en/solutions/infotainment-digital-experiences.html",
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Dec 2023",
     points: [
-      "Coordinated integration of HCP3 Infotainment System for Audi EQ-5, EQ-6, and Porsche Taycan.",
-      "Directed and managed 3 Testing Teams onsite factory (12px) and coordinated 20 Teams and Product Owners for Validation & Verification activities.",
-      "Planned and scheduled the Validation and Testing activities, including factory vehicle management, WBS planning, and SOP Phase Roadmap.",
-      "Deployed the overall Program Test Strategy using JIRA, Confluence, and CodeBeamer for accurate release planning and stakeholder management.",
-      "Stacks: VW, ASPICE, PowerBI, Python, PTC Codebeamer, ADAS/IVI Display, Azure Cloud, SLA, KPI, Lean Manufacturing, Jira, Confluence, V-Model, SAFe, SVN, Azure DevOps CI/CD, ISTQB, MS Project.",
+      "Coordinated integration of the HCP3 Infotainment System for Audi Q5, Q6, and Porsche Taycan programs.",
+      "Led validation and verification across 20 cross-functional teams, managing 3 onsite testing units and ensuring full alignment with OEM requirements.",
+      "Defined and executed the program test strategy, including vehicle allocation, WBS planning, and SOP roadmap, using Jira, Confluence, and Codebeamer for release control.",
     ],
   },
   {
     title: "Project Manager",
     company_name: "BMW",
-    icon: shopify,
+    icon: bmw,
+    company_link: "https://www.bmw.co.uk/en/digital-services/bmw-idrive.html#bmw-idrive",
     iconBg: "#383E56",
     date: "Jan 2022 - Dec 2022",
     points: [
@@ -206,22 +251,24 @@ export const EXPERIENCES = [
   },
   {
     title: "Solutions Architect",
-    company_name: "Idneo",
-    icon: meta,
+    company_name: "GM Cruise",
+    icon: gm,
+    company_link: "https://www.gm.com/innovation/av-safe-deployment",
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Dec 2021",
     points: [
-      "Directed the development of an ADAS FPGA-based processor for autonomous Robo-taxi PCB series production.",
-      "Coordinated cross-functional efforts between teams, suppliers, and stakeholders in USA and Barcelona.",
+      "Directed GM's supplier Tech Teams (Idneo) for the development of an ADAS FPGA-based processor for autonomous Robo-taxi PCB series production.",
+      "Coordinated cross-functional efforts between teams, suppliers, and stakeholders in USA/BCN.",
       "Defined and coordinated project activities for HW, SW, Validation, and led supplier communication.",
-      "Assessed risks and drove mitigation strategies for lead-time, workflows, compliance, and quality control.",
+      "Assessed risks and drove mitigation strategies for lead-time, workflows, compliance, and QA control.",
       "Stacks: Altium, DFMEA, PFMEA, Control Plan, V-Model, FuSa, ISO-26262, DOORS, APQP, PPAP, Jira, Confluence, PowerBI, Six Sigma, Lean Manufacturing, MS Project.",
     ],
   },
   {
     title: "Founder",
     company_name: "Movildrive",
-    icon: meta,
+    icon: movildrive,
+    company_link: "https://movildrive.com",
     iconBg: "#E6DEDD",
     date: "Jan 2018 - Dec 2020",
     points: [
@@ -229,13 +276,14 @@ export const EXPERIENCES = [
       "Managed and planned the full lifecycle from platform and product (App Design) to AppStore deployment and first services sales.",
       "Developed the operations & GTM Strategy for the MVP launch, defining the Front-End & Back-End Software Specification.",
       "Partnered with energy suppliers and third-party software vendors to ensure charging endpoint seamless integration.",
-      "Stacks: Lean Startup, OKRs, iOS, Objective-C/Swift, Android, Kotlin, Fundraising, HTML, JS, CSS, Marketing, Firebase, GCP, Stripe, Figma, SEO/SEM, Analytics, Pitch-Deck, MVP, Ads, Email Marketing, Legal.",
+      "Stacks: Lean Startup, OKRs, iOS, Objective-C/Swift, Android, Kotlin, Fundraising, HTML, JS, CSS, Marketing, Firebase, GCP, Stripe, Figma, SEO/SEM, Analytics, Pitch-Deck, MVP, Ads, Legal.",
     ],
   },
   {
     title: "Software DevOps Manager",
     company_name: "Visteon",
-    icon: meta,
+    company_link: "https://visteon.com",
+    icon: visteon,
     iconBg: "#E6DEDD",
     date: "Jan 2020 - Dec 2021",
     points: [
@@ -248,7 +296,8 @@ export const EXPERIENCES = [
   {
     title: "Systems Integration Lead",
     company_name: "Magna",
-    icon: meta,
+    company_link: "https://www.magna.com",
+    icon: magna,
     iconBg: "#E6DEDD",
     date: "Jan 2019 - Dec 2020",
     points: [
@@ -261,7 +310,8 @@ export const EXPERIENCES = [
   {
     title: "Software Engineer",
     company_name: "Continental",
-    icon: meta,
+    company_link: "https://www.continental.com/en-us/",
+    icon: continental,
     iconBg: "#E6DEDD",
     date: "Jan 2017 - Dec 2018",
     points: [
@@ -274,7 +324,8 @@ export const EXPERIENCES = [
   {
     title: "Systems Engineer",
     company_name: "Airbus",
-    icon: meta,
+    company_link: "https://www.airbus.com",
+    icon: airbus,
     iconBg: "#E6DEDD",
     date: "Jan 2015 - Dec 2016",
     points: [
@@ -287,7 +338,8 @@ export const EXPERIENCES = [
   {
     title: "Systems Engineer",
     company_name: "ESA",
-    icon: meta,
+    company_link: "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Columbus/Columbus_Control_Centre_Oberpfaffenhofen_Germany",
+    icon: esa,
     iconBg: "#E6DEDD",
     date: "Jan 2013 - Dec 2014",
     points: [
@@ -300,7 +352,8 @@ export const EXPERIENCES = [
   {
     title: "Systems Engineer",
     company_name: "Indra",
-    icon: meta,
+    company_link: "https://www.indracompany.com/en/satellite-control-tracking-centers-0",
+    icon: indra,
     iconBg: "#E6DEDD",
     date: "Jan 2011 - Dec 2012",
     points: [

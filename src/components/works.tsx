@@ -111,11 +111,11 @@ export const Works = () => {
             className="mt-3 text-[17px] text-[#19212D] max-w-3xl leading-[30px]"
           >
             The following projects showcases my skills and experience through
-            Artificial Intelligence, platform automation, and real-world examples of my work
-            and Apps I have developed. Each project is briefly described
-            with links to the websites or portfolio. Some of them with live demos and GitHub links.
-            It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
-          </motion.p>
+            Artificial Intelligence, ERP & CRO Platform Automation, and Engineering Projects across 20 year of experience in
+            various countries. Each project is briefly describe and some of them includes live demos, GitHub repositories and links to live websites. < br/>< br/>
+
+            These portfolio highlights my experience managing both large-scale engineering programs and early-stage start-up initiatives, covering the full lifecycle from system design to commercial launch.
+            </motion.p>
         </div>
 
         {/* Project Card */}
