@@ -96,8 +96,8 @@ export const About = () => {
             <span className="hover-smart"> Telecommunications Systems Engineer </span>
             with nearly <span className="hover-smart">20 years of top experience </span> in
             <span className="hover-smart"> technology–driven programs & projects </span>
-            across <span className="hover-smart">Aerospace,</span>
-            <span className="hover-smart"> Automotive </span>, and
+            across <span className="hover-smart">Aerospace 🚀🚀🚀,</span>
+            <span className="hover-smart"> Automotive, </span>and
             <span className="hover-smart"> Digital Consulting </span> sectors.
 
             <br /><br />
@@ -133,6 +133,11 @@ export const About = () => {
             <span className="hover-smart"> delivering Results, </span>
             <span className="hover-smart"> Innovation Strategies</span>, and
             <span className="hover-smart"> Operational Excellence.</span>
+
+            <br /><br />
+
+            <span className="hover-smart"> 👉🏻 Download my CV 👈🏻</span>
+
           </motion.p>
 
           <div className="flex-shrink-0">

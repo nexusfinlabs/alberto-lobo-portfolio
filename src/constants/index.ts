@@ -15,6 +15,7 @@ import continental from "../assets/company/continental.png";
 import airbus from "../assets/company/airbus.png";
 import esa from "../assets/company/esa.png";
 import indra from "../assets/company/indra.png";
+import uah from "../assets/company/uah.png";
 
 // Imports services
 import service1 from "../assets/services/service1.jpg";
@@ -345,7 +346,7 @@ export const EXPERIENCES = [
     points: [
       "Qualified two Galileo ESA TTC S-Band stations at Kiruna and Kourou.",
       "Designed RF specification for S-Band antenna tracking and satellite optimization.",
-      "Coordinated ISS Columbus module communications between astronauts, NASA, IATV, and JAXA control centers.",
+      "Coordinated ISS Columbus module communications between astronauts, NASA, IATV, GSOC and JAXA control centers.",
       "Stacks: NATO Crypto, Human Spaceflight, RF Systems, PowerBI, MS Project.",
     ],
   },
@@ -355,12 +356,23 @@ export const EXPERIENCES = [
     company_link: "https://www.indracompany.com/en/satellite-control-tracking-centers-0",
     icon: indra,
     iconBg: "#E6DEDD",
-    date: "Jan 2011 - Dec 2012",
+    date: "Jan 2008 - Dec 2012",
     points: [
       "Supported Galileo integration activities with GPS/GLONASS during internship with INECO.",
       "Coordinated ESA stakeholders and partners for Horizon 2020 project planning.",
       "Stacks: DOORS, PowerBI, PMBOK, FTA, FMEA, Hazard Analysis, Safety Case, PRA, RAMS, Isograph, MS Project.",
     ],
+  },
+    {
+      title: "Uni IT-Lab Technician (Intership)",
+      company_name: "UAH University",
+      company_link: "https://escuelapolitecnica.uah.es/es/",
+      icon: uah,
+      iconBg: "#E6DEDD",
+      date: "Jan 2007 - Dec 2007",
+      points: [
+        "Provide on-site technical & IT support for the internet lab, classrooms and events, including setup and troubleshooting of computers, projectors, audio systems, video conferencing tools, and network connectivity.",
+      ]
   },
 ] as const;
 

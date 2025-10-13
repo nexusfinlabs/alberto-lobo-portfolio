@@ -309,7 +309,6 @@
 .lead-contrast{ color: color-mix(in srgb, var(--color-text) 88%, black); }
 
 /* Canvas del portátil: tamaño visible y z-index correcto */
-/* Wrapper del canvas: visible, abajo, y alineado a la derecha */
 .canvas-under{
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -321,6 +320,12 @@
 @media (min-width:1280px){ .canvas-under{ height: 50vh; } }
 @media (max-width:1024px){ .canvas-under{ height: 42vh; } }
 @media (max-width:640px) { .canvas-under{ height: 38vh; } }
+
+.canvas-under canvas{
+  width:100% !important;
+  height:100% !important;
+  display:block;
+}
 
 /* desplazamiento hacia la derecha sin romper el scale (usamos padding) */
 .laptop-nudge-right{ padding-right: 8vw; }
@@ -336,84 +341,11 @@
   pointer-events:none;
 }
 
-/* ==== GRADIENTE AZUL → NARANJA (PRO) ==== */
-.bg-softtech-linear-strong{
-  background: linear-gradient(
-    115deg,
-    #A7C5EB 0%,
-    #94B3DE 22%,
-    #FFD5C8 68%,
-    #FFB4A2 100%
-  );
-}
-
-/* Legibilidad de títulos sobre gradiente */
-.text-elevated{
-  text-shadow: 0 2px 10px rgba(28,38,51,.25), 0 1px 0 rgba(255,255,255,.25);
-}
-
-/* Píldora glass para resaltar texto */
-.pill-glass{
-  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid color-mix(in srgb, var(--color-secondary) 25%, transparent);
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-  border-radius: 16px;
-}
-
-/* Párrafos con más contraste sobre el gradiente */
-.lead-contrast{
-  color: color-mix(in srgb, var(--color-text) 88%, black);
-}
-
-/* Wrapper del canvas: visible, abajo, y alineado a la derecha */
-.canvas-under{
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 48vh;
-  z-index: 2;
-  pointer-events: none;
-  display: flex; align-items: flex-end; justify-content: flex-end;
-}
-@media (min-width:1280px){ .canvas-under{ height: 50vh; } }
-@media (max-width:1024px){ .canvas-under{ height: 42vh; } }
-@media (max-width:640px) { .canvas-under{ height: 38vh; } }
-
-/* desplazamiento hacia la derecha sin romper el scale (usamos padding) */
-.laptop-nudge-right{ padding-right: 8vw; }
-@media (min-width:1536px){ .laptop-nudge-right{ padding-right: 12vw; } }
-
-.canvas-under canvas{ width:100% !important; height:100% !important; display:block; }
-
 /* tamaño y posición del portátil */
 .laptop-xl{ transform: scale(1.35); transform-origin: 85% 100%; }
 @media (max-width:1280px){ .laptop-xl{ transform: scale(1.20); } }
 @media (max-width:1024px){ .laptop-xl{ transform: scale(1.05); transform-origin: 80% 100%; } }
 @media (max-width:640px) { .laptop-xl{ transform: scale(0.90); transform-origin: 70% 100%; } }
-
-.laptop-raise{ translate: 0 -10px; }
-@media (min-width:1280px){ .laptop-raise{ translate: 0 -20px; } }
-
-
-/* (Opcional) si usas el desvanecido inferior, ponlo por encima del canvas */
-.hero-fade-bottom{ z-index: 3; }
-
-/* Desvanecido inferior para que el 3D no compita con el copy */
-.hero-fade-bottom{
-  position:absolute; left:0; right:0; bottom:0; height:180px;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--color-bg) 85%);
-  pointer-events:none;
-}
-
-/* === Escalado/posición del portátil (más grande, hacia la derecha) === */
-.laptop-xl{
-  transform: scale(1.35);
-  transform-origin: 85% 100%;
-}
-@media (max-width:1280px){ .laptop-xl{ transform: scale(1.20); } }
-@media (max-width:1024px){ .laptop-xl{ transform: scale(1.05); transform-origin: 80% 100%; } }
-@media (max-width:640px){  .laptop-xl{ transform: scale(0.90); transform-origin: 70% 100%; } }
 
 .laptop-raise{ translate: 0 -10px; }
 @media (min-width:1280px){ .laptop-raise{ translate: 0 -20px; } }
@@ -665,4 +597,22 @@
   padding: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   object-fit: contain;
+}
+
+/* Check responsive Appearance */
+section {
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Fix for mobile viewport height --- */
+@supports not (height: 100dvh) {
+  .min-h-\[100dvh\] {
+    min-height: 100vh;
+  }
+}
+
+/* hide the heavy canvas on phones */
+@media (max-width: 640px) {
+  .canvas-under { display: none !important; }
 }

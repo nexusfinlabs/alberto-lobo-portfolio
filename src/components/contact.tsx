@@ -33,7 +33,7 @@ export const Contact = () => {
           <div>
             <h4 className="text-lg font-semibold text-primary">Address</h4>
             <p className="text-gray-700">
-              Between Munich and Barcelona (available for travel)
+              Madrid & Barcelona | Available for remote projects
             </p>
           </div>
 

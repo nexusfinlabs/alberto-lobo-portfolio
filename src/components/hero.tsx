@@ -6,7 +6,7 @@ import { cn } from "../utils/lib";
 export const Hero = () => {
   return (
     // 1) Fondo: gradiente azul → naranja
-    <section className="relative w-full h-screen mx-auto bg-softtech-linear-strong">
+    <section className="relative w-full min-h-[100dvh] mx-auto bg-softtech-linear-strong overflow-visible">
 
       {/* 2) Contenido */}
       <div
