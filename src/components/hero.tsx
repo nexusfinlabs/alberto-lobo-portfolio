@@ -38,7 +38,7 @@ export const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a href="#work" className="btn btn-primary">Work & Projects</a>
             <a
               href="https://www.linkedin.com/in/ajleblob/"
@@ -51,6 +51,27 @@ export const Hero = () => {
 
             </a>
           </div>
+
+
+          {/* Download CV Button — versión cool & soft-tech */}
+          <a
+            href="https:/nexusfinlabs.com/doc/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-accent text-[#472b20] font-semibold flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+            </svg>
+            Download CV
+          </a>
 
           {/* New Buttons
           <!div><br />

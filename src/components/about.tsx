@@ -136,7 +136,14 @@ export const About = () => {
 
             <br /><br />
 
-            <span className="hover-smart"> 👉🏻 Download my CV 👈🏻</span>
+            <a
+              href="https://nexusfinlabs.com/doc/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-smart font-semibold underline decoration-transparent hover:decoration-current transition-all duration-300"
+            >
+              👉🏻 Download my CV 👈🏻
+            </a>
 
           </motion.p>
 
