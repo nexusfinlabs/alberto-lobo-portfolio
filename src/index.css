@@ -654,31 +654,6 @@ section {
   }
 }
 
-/* === MOBILE CLEAN VERSION === */
-@media (max-width: 768px) {
-
-  /* Oculta la sección Overview */
-  section#about {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Oculta la foto del perfil (si está dentro de .profile-photo) */
-  .profile-photo {
-    display: none !important;
-  }
-
-}
-
-/* === HIDE ABOUT FOR MOBILES === */
-@media (max-width: 768px) {
-  nav a[href="#about"] {
-    display: none !important;
-  }
-}
-
 /* === Hide only Projects content on mobile (keep section anchor) === */
 @media (max-width: 768px) {
 
@@ -701,33 +676,52 @@ section {
   }
 }
 
-/* === Oculta completamente la sección Projects en móvil === */
-/* === Oculta completamente la sección Projects en móvil (sin hueco) === */
+/* --- ESPACIADO ENTRE HERO Y OVERVIEW (FIX MÓVIL REAL) --- */
+.section-overview,
+.about,
+#overview {
+  margin-top: 5vh !important;
+  padding-top: 3vh !important;
+}
+
+/* Ajuste extra solo para móviles reales */
 @media (max-width: 768px) {
+  .section-overview,
+  .about,
+  #overview {
+    margin-top: 7vh !important;
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+}
 
-  section#work {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
+/* --- FIX ESPECÍFICO PARA TABLETS (768–1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    min-height: 90vh !important;
+    overflow: visible !important;
   }
 
-  /* También oculta Overview y la foto */
-  section#about,
-  .profile-photo {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
+  .canvas-under {
+    position: relative !important;
+    height: 45vh !important;
+    min-height: auto !important;
+    overflow: visible !important;
   }
 
-  /* Fuerza el reset del padding de Tailwind (por seguridad extra) */
-  section[class*="py-"],
-  section[class*="px-"] {
-    padding: 0 !important;
+  /* Asegura que Overview no quede pegado ni tapado */
+  .section-overview,
+  .about,
+  #overview {
+    margin-top: 8vh !important;
+    padding-top: 4vh !important;
+    padding-left: 6vw !important;
+    padding-right: 6vw !important;
+  }
+
+  /* Pequeño ajuste de escala si el canvas es muy grande */
+  .laptop-xl {
+    transform: scale(1.05);
+    transform-origin: 80% 100%;
   }
 }
