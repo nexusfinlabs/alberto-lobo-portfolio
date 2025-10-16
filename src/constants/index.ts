@@ -286,7 +286,7 @@ export const EXPERIENCES = [
     company_link: "https://visteon.com",
     icon: visteon,
     iconBg: "#E6DEDD",
-    date: "Jan 2020 - Dec 2021",
+    date: "Jul 2016 - Dec 2017",
     points: [
       "Directed & Led the design of a software automation testing framework for Mercedes-Benz IVI Series A-D and Daimler Trucks.",
       "Automated Software Integration activities for Combi Displays, while coordinating European and Indian SW teams.",
@@ -300,7 +300,7 @@ export const EXPERIENCES = [
     company_link: "https://www.magna.com",
     icon: magna,
     iconBg: "#E6DEDD",
-    date: "Jan 2019 - Dec 2020",
+    date: "Jan 2016 - Jun 2016",
     points: [
       "Coordinated the FQT for Maserati Levante & Mazda 3 prototypes.",
       "Developed ADAS Lane Keeping Assist Test on-road and Lane Detection Warning functional validation.",
@@ -314,7 +314,7 @@ export const EXPERIENCES = [
     company_link: "https://www.continental.com/en-us/",
     icon: continental,
     iconBg: "#E6DEDD",
-    date: "Jan 2017 - Dec 2018",
+    date: "Jan 2013 - Dec 2015",
     points: [
       "Validated and Qualified SW Code for ADAS forward sensing camera for Toyota and BMW.",
       "Test strategy specification to achieve ~99% test coverage on ASIL-B/D algorithms.",
@@ -328,7 +328,7 @@ export const EXPERIENCES = [
     company_link: "https://www.airbus.com",
     icon: airbus,
     iconBg: "#E6DEDD",
-    date: "Jan 2015 - Dec 2016",
+    date: "Jan 2012 - Dec 2012",
     points: [
       "Led NATO SECRET Systems qualification for Eurofighter Tranche 3 series program.",
       "Integrated architecture, RF/Audio/Video systems for MRTT, FSTA & Military Drone Programs.",
@@ -342,7 +342,7 @@ export const EXPERIENCES = [
     company_link: "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Columbus/Columbus_Control_Centre_Oberpfaffenhofen_Germany",
     icon: esa,
     iconBg: "#E6DEDD",
-    date: "Jan 2013 - Dec 2014",
+    date: "Jan 2011 - Dec 2011",
     points: [
       "Qualified two Galileo ESA TTC S-Band stations at Kiruna and Kourou.",
       "Designed RF specification for S-Band antenna tracking and satellite optimization.",
@@ -356,7 +356,7 @@ export const EXPERIENCES = [
     company_link: "https://www.indracompany.com/en/satellite-control-tracking-centers-0",
     icon: indra,
     iconBg: "#E6DEDD",
-    date: "Jan 2008 - Dec 2012",
+    date: "Jan 2008 - Dec 2010",
     points: [
       "Supported Galileo integration activities with GPS/GLONASS during internship with INECO.",
       "Coordinated ESA stakeholders and partners for Horizon 2020 project planning.",
