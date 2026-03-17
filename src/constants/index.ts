@@ -370,7 +370,7 @@ export const EXPERIENCES = [
       company_link: "https://escuelapolitecnica.uah.es/es/",
       icon: uah,
       iconBg: "#E6DEDD",
-      date: "Jan 2007 - Dec 2007",
+      date: "Jan 2006 - Dec 2007",
       points: [
         "Provide on-site technical & IT support for the internet lab, classrooms and events, including setup and troubleshooting of computers, projectors, audio systems, video conferencing tools, and network connectivity.",
       ]

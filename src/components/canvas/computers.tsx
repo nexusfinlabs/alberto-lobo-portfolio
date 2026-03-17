@@ -20,7 +20,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
   const scale = isMobile ? 0.55 : 0.75;
 
   // Colours - Space Grey MacBook style
-  const bodyColor = "#6e6e73";
+  const bodyColor = "#c8c8cc";
   const darkColor = "#0a0a0a";
 
   return (
@@ -41,7 +41,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
       {/* Base bottom lip (thinner edge) */}
       <RoundedBox args={[3.55, 0.03, 2.25]} radius={0.015} smoothness={4}
         position={[0, -0.005, 0]}>
-        <meshStandardMaterial color="#4a4a4f" metalness={0.9} roughness={0.2} />
+        <meshStandardMaterial color="#b0b0b5" metalness={0.9} roughness={0.15} />
       </RoundedBox>
 
       {/* Keyboard area */}
@@ -89,7 +89,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
       {/* Hinge strip */}
       <RoundedBox args={[3.2, 0.06, 0.08]} radius={0.025} smoothness={4}
         position={[0, 0.08, -1.12]}>
-        <meshStandardMaterial color="#5a5a5f" metalness={0.95} roughness={0.1} />
+        <meshStandardMaterial color="#a8a8ad" metalness={0.95} roughness={0.1} />
       </RoundedBox>
     </group>
   );
