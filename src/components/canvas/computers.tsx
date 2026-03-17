@@ -4,7 +4,13 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import CanvasLoader from "../loader";
 
-const Laptop = ({ isMobile }: { isMobile: boolean }) => {
+const Laptop = ({
+  isMobile,
+  onHover,
+}: {
+  isMobile: boolean;
+  onHover: (h: boolean) => void;
+}) => {
   const groupRef = useRef<THREE.Group>(null!);
   const texture = useLoader(THREE.TextureLoader, "/Alberto.png");
 
@@ -19,14 +25,20 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
 
   const scale = isMobile ? 0.55 : 0.75;
 
-  // Colours - Space Grey MacBook style
-  const bodyColor = "#c8c8cc";
+  // Colours - Silver MacBook style (medium grey)
+  const bodyColor = "#b0b0b5";
   const darkColor = "#0a0a0a";
 
   return (
-    <group ref={groupRef} scale={scale} position={[0, -0.5, 0]}>
+    <group
+      ref={groupRef}
+      scale={scale}
+      position={[0, -0.5, 0]}
+      onPointerOver={() => onHover(true)}
+      onPointerOut={() => onHover(false)}
+    >
       {/* Lighting */}
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.6} />
       <directionalLight position={[5, 8, 5]} intensity={1.8} castShadow />
       <pointLight position={[-3, 4, 4]} intensity={0.5} color="#8ab4f8" />
       <pointLight position={[3, 2, -2]} intensity={0.3} color="#ffb088" />
@@ -35,13 +47,13 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
       {/* === BASE — rounded MacBook-style === */}
       <RoundedBox args={[3.6, 0.08, 2.3]} radius={0.04} smoothness={4}
         position={[0, 0.04, 0]} castShadow receiveShadow>
-        <meshStandardMaterial color={bodyColor} metalness={0.9} roughness={0.15} />
+        <meshStandardMaterial color={bodyColor} metalness={0.3} roughness={0.4} />
       </RoundedBox>
 
       {/* Base bottom lip (thinner edge) */}
       <RoundedBox args={[3.55, 0.03, 2.25]} radius={0.015} smoothness={4}
         position={[0, -0.005, 0]}>
-        <meshStandardMaterial color="#b0b0b5" metalness={0.9} roughness={0.15} />
+        <meshStandardMaterial color="#a0a0a5" metalness={0.3} roughness={0.4} />
       </RoundedBox>
 
       {/* Keyboard area */}
@@ -59,7 +71,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
       {/* === LID — rounded, standing at 90° === */}
       <RoundedBox args={[3.6, 2.4, 0.05]} radius={0.04} smoothness={4}
         position={[0, 1.28, -1.15]} castShadow>
-        <meshStandardMaterial color={bodyColor} metalness={0.9} roughness={0.15} />
+        <meshStandardMaterial color={bodyColor} metalness={0.3} roughness={0.4} />
       </RoundedBox>
 
       {/* Screen bezel (dark inset) */}
@@ -89,7 +101,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
       {/* Hinge strip */}
       <RoundedBox args={[3.2, 0.06, 0.08]} radius={0.025} smoothness={4}
         position={[0, 0.08, -1.12]}>
-        <meshStandardMaterial color="#a8a8ad" metalness={0.95} roughness={0.1} />
+        <meshStandardMaterial color="#a0a0a5" metalness={0.4} roughness={0.3} />
       </RoundedBox>
     </group>
   );
@@ -97,6 +109,7 @@ const Laptop = ({ isMobile }: { isMobile: boolean }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [hoverModel, setHoverModel] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 500px)");
@@ -114,8 +127,15 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true, alpha: true, antialias: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom enablePan maxPolarAngle={Math.PI} minPolarAngle={0} rotateSpeed={0.8} />
-        <Laptop isMobile={isMobile} />
+        <OrbitControls
+          enableZoom={hoverModel}
+          enablePan={false}
+          enableRotate
+          maxPolarAngle={Math.PI}
+          minPolarAngle={0}
+          rotateSpeed={0.8}
+        />
+        <Laptop isMobile={isMobile} onHover={setHoverModel} />
       </Suspense>
       <Preload all />
     </Canvas>
