@@ -120,9 +120,9 @@ export const About = () => {
             <span className="hover-smart">Operating Model redesign</span>,
             <span className="hover-smart"> Organizational and cultural change</span>,{" "}
             <span className="hover-smart">Change Management</span>, and{" "}
-            <span className="hover-smart">ERP implementation</span>,
-            particularly SAP with focus on{" "}
-            <span className="hover-smart">SAP FICO and BTP.</span>
+            <span className="hover-smart">AI-driven automation</span>,
+            with deep focus on{" "}
+            <span className="hover-smart">LLM orchestration, RAG systems, and agentic AI.</span>
 
             <br /><br />
 

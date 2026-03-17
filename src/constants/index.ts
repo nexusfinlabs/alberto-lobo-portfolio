@@ -3,7 +3,7 @@ import meta from "../assets/company/meta.png";
 import shopify from "../assets/company/shopify.png";
 import starbucks from "../assets/company/starbucks.png";
 import tesla from "../assets/company/tesla.png";
-import sap from "../assets/company/sap.png";
+import anthropic from "../assets/company/anthropic.png";
 import vw from "../assets/company/vw.png";
 import openai from "../assets/company/openai.png";
 import bmw from "../assets/company/bmw.png";
@@ -198,16 +198,16 @@ export const TECHNOLOGIES = [
 // -----------------------------------------------------------
 export const EXPERIENCES = [
   {
-    title: "SAP FICO Consultant",
-    company_name: "Freelancer",
-    icon: sap,
-    company_link: "https://www.sap.com",
-    iconBg: "#trasparent",
+    title: "AI & LLM Tech Lead",
+    company_name: "NexusFinLabs",
+    icon: anthropic,
+    company_link: "https://nexusfinlabs.com",
+    iconBg: "#D4C5A9",
     date: "Oct 2025 - now",
     points: [
-      "SAP FI/CO Consultant experienced in end-to-end implementation, integration, and optimization of financial & controlling processes across global environments (GL, AP, AR, AA, COPA, PCA).",
-      "Strategy implementation for SAP BTP extensions using CAP, Fiori Elements, and CDS Views, integrating with S/4HANA Cloud and external APIs to automate workflows and analytics.",
-      "Strong focus on process automation, financial reporting, and data migration (Central Finance, IRPA, BRF+, Migration Cockpit) ensuring compliance and operational efficiency.",
+      "Designed a Banking AML/KYC Multi-Agent Copilot using agentic RAG architecture with pgvector, hybrid retrieval, and governance-enforced explainability for compliance investigations.",
+      "Built an end-to-end RAG system for medical imaging (TCIA/DICOM) with BiomedCLIP + BM25 + Vector Search, enabling LLM-grounded querying of oncology datasets.",
+      "Led AI-driven enterprise automation integrating Microsoft Graph APIs, PowerShell, and LLM classification for endpoint management, incident response, and decision support.",
     ],
   },
   {
