@@ -127,8 +127,7 @@ export const NAV_LINKS = [
   },
   {
     title: "AboutMe",
-    link: null,
-    link: "http://www.github.com/nexusfinlabs",
+    link: "https://movildrive.com/aboutme.html",
   },
   {
     id: "source-code",
