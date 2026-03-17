@@ -51,7 +51,7 @@ export const Hero = () => {
 
             {/* Download CV */}
             <a
-              href="https://nexusfinlabs.com/doc/cv.pdf"
+              href="/doc/CV_ALL_2026_PM_EN_AIDirector.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-accent text-[#472b20] font-semibold flex items-center gap-2"
