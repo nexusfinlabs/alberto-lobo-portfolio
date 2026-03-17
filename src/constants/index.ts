@@ -205,8 +205,9 @@ export const EXPERIENCES = [
     iconBg: "#D4C5A9",
     date: "Oct 2025 - now",
     points: [
+      "Architected a production RAG pipeline for pharmaceutical and life sciences R&D, enabling AI-assisted drug interaction analysis, clinical trial literature review, and regulatory document retrieval across FDA/EMA datasets.",
+      "Developed a multi-modal RAG system for medical imaging (TCIA/DICOM) with BiomedCLIP + BM25 + Vector Search, powering LLM-grounded oncology and radiology dataset querying for hospital and research use cases.",
       "Designed a Banking AML/KYC Multi-Agent Copilot using agentic RAG architecture with pgvector, hybrid retrieval, and governance-enforced explainability for compliance investigations.",
-      "Built an end-to-end RAG system for medical imaging (TCIA/DICOM) with BiomedCLIP + BM25 + Vector Search, enabling LLM-grounded querying of oncology datasets.",
       "Led AI-driven enterprise automation integrating Microsoft Graph APIs, PowerShell, and LLM classification for endpoint management, incident response, and decision support.",
     ],
   },
