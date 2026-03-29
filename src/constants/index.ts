@@ -197,7 +197,7 @@ export const TECHNOLOGIES = [
 // -----------------------------------------------------------
 export const EXPERIENCES = [
   {
-    title: "AI & LLM Tech Lead",
+    title: "Senior AI Consultant",
     company_name: "NexusFinLabs",
     icon: anthropic,
     company_link: "https://nexusfinlabs.com",
