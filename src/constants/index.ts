@@ -224,7 +224,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Engineering Senior Program Manager",
+    title: "Engineering Program Manager",
     company_name: "Cariad (VW Group)",
     icon: vw,
     company_link: "https://cariad.technology/de/en/solutions/infotainment-digital-experiences.html",
@@ -237,7 +237,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Project Manager",
+    title: "Senior Program Manager",
     company_name: "BMW",
     icon: bmw,
     company_link: "https://www.bmw.co.uk/en/digital-services/bmw-idrive.html#bmw-idrive",
