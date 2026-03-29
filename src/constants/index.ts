@@ -211,7 +211,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "AI & Web3 Tech Lead",
+    title: "AI Strategy Consultant",
     company_name: "Freelancer",
     icon: openai,
     company_link: "https://iagrowth.io/automation.html",
@@ -224,7 +224,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Program Manager",
+    title: "Engineering Senior Program Manager",
     company_name: "Cariad (VW Group)",
     icon: vw,
     company_link: "https://cariad.technology/de/en/solutions/infotainment-digital-experiences.html",
@@ -281,7 +281,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Software DevOps Manager",
+    title: "Senior DevOps Engineer",
     company_name: "Visteon",
     company_link: "https://visteon.com",
     icon: visteon,
@@ -309,7 +309,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Software Test Engineer",
     company_name: "Continental",
     company_link: "https://www.continental.com/en-us/",
     icon: continental,
